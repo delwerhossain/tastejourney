@@ -137,8 +137,8 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Optimize build output for deployment
-  output: "standalone",
+  // Optimize build output for deployment if enabled
+  output: process.env.NEXT_STANDALONE === "true" ? "standalone" : undefined,
 
   // Enable compression
   compress: true,
